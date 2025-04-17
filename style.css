@@ -11,7 +11,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #f2f2f2;
+  background-color: #fff;
 }
 
 header h1 a {
@@ -38,8 +38,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  color: #ce39c1;
 }
+.about-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+
 .about-me-container {
   display: flex;
   flex-direction: column;
@@ -51,10 +68,6 @@ nav ul li a:hover {
   text-align: center;
 }
 
-img {
-  border-radius: 50%;
-  width: 250px;
-}
 .links {
   margin-top: 20px;
 }
@@ -63,34 +76,6 @@ img {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-
-.links a {
-  display: inline-block;
-  padding: 15px;
-  margin: 10px;
-  color: #000;
-  font-size: 1.1rem;
-  text-decoration: none;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  line-height: 70px;
-  background-color: #ccec12;
-  text-align: center;
-}
-
-.cv {
-  background-color: #4caf50;
-}
-
-.project {
-  background-color: #2196f3;
-}
-
-.contact {
-  background-color: #f44336;
-}
-
 .about-me-text h1,
 .about-me-text h4 {
   margin: 10px 0;
@@ -105,9 +90,11 @@ img {
 }
 .footer-section {
   padding: 40px;
-  background-color: #f1f1f1;
+  background-color: #fff;
   text-align: center;
+  text-decoration: none;
 }
+
 
 .footer {
   display: flex;
@@ -115,7 +102,52 @@ img {
 
   align-items: center;
   gap: 40px;
+  text-decoration: none;
 }
+.projects-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: none; 
+}
+
+.project-card h3 {
+  margin-top: 15px;
+  color: #007bff;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
 
 .footer section {
   flex: 1;
@@ -138,6 +170,87 @@ img {
 .footer-end {
   margin-top: 20px;
   text-align: center;
+}
+.skills-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.skill-card {
+  background: white;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card i {
+  font-size: 50px;
+  color: #ff5722;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cv-left,
+  .cv-right {
+    min-width: 100%;
+  }
+
+  .cv-left p,
+  .cv-right li {
+    font-size: 1rem;
+  }
+
+  .cv-section {
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -177,24 +290,28 @@ img {
 
   width: 100px;
   height: 100px;
-  background-color: #ccec12;
+  
 }
 
 .contact-section {
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
+  
 }
 
 .info-contact {
   width: 50%;
   display: flex;
   flex-direction: column;
+  
+  
 
   
 }
 .formulaire {
   width: 50%;
+  
   
 }
 
